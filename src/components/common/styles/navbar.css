@@ -1,0 +1,26 @@
+.nav-bar {
+	display: flex;
+	position: fixed;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding: 20px 0;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.page-links a {
+	padding: 10px;
+	margin-inline: 10px;
+	text-decoration: none;
+	color: #202020;
+	border-radius: 20px;
+	transition: ease-in-out 0.3s;
+}
+
+.page-links a:hover,
+.active {
+	background-color: cornflowerblue;
+	color: aliceblue;
+}
