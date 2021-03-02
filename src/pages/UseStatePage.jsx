@@ -7,7 +7,7 @@ function UseStatePage() {
 	return (
 		<div>
 			<Navbar />
-			<section className="grid grid-cols-2 grid-rows-1 divide-x divide-black">
+			<section className="grid grid-cols-2 grid-rows-1 space-x-20 ">
 				<div>
 					<CCounter />
 				</div>
