@@ -7,6 +7,7 @@ class CProfile extends React.Component {
 		this.state = {
 			firstName: null,
 			surname: null,
+			codeHidden: true,
 		};
 
 		this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -48,8 +49,17 @@ class CProfile extends React.Component {
 					)}
 				</div>
 				<div className="h-3/4 mt-5">
-					<h1 className="text-xl font-semibold">The code</h1>
-					<Gist id="ebe006dec8e46a78a43af096f019cd31" />
+					<div className="flex flex-row space-x-2">
+						<button
+							className="text-lg font-light bg-blue-200 rounded-lg px-3 transition ease-in-out duration-150"
+							onClick={() =>
+								this.setState({ ...this.state, codeHidden: !this.state.codeHidden })
+							}
+						>
+							{this.state.codeHidden ? "Show Code" : "Hide Code"}
+						</button>
+					</div>
+					{!this.state.codeHidden && <Gist id="ebe006dec8e46a78a43af096f019cd31" />}
 				</div>
 			</section>
 		);

@@ -4,6 +4,7 @@ import Gist from "react-gist";
 function FProfile() {
 	const [firstName, setFirstName] = useState(null);
 	const [surname, setSurname] = useState(null);
+	const [codeHidden, setCodeHidden] = useState(true);
 
 	const handleFirstNameChange = (e) => setFirstName(e.target.value);
 	const handleSurnameChange = (e) => setSurname(e.target.value);
@@ -32,8 +33,13 @@ function FProfile() {
 				)}
 			</div>
 			<div className="h-3/4 mt-5">
-				<h1 className="text-xl font-semibold">The code</h1>
-				<Gist id="a8925bfb44e1218e6250bdc35bf5095e" />
+				<button
+					className="text-xl font-light bg-blue-200 px-2 rounded-lg"
+					onClick={() => setCodeHidden(!codeHidden)}
+				>
+					{codeHidden ? "Show Code" : "Hide Code"}
+				</button>
+				{!codeHidden && <Gist id="a8925bfb44e1218e6250bdc35bf5095e" />}
 			</div>
 		</section>
 	);

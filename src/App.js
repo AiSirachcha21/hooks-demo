@@ -1,14 +1,16 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function App() {
+	useEffect(() => {
+		document.title = "React Hook Demo";
+	}, []);
 	return (
 		<div className="container mx-auto">
 			<section className="h-screen flex flex-row justify-center items-center">
 				<div className="flex-1">
 					<h1 className="text-6xl">Hi there.</h1>
-					<h4 className="text-xl">
-						This project is a simple demo on React Hooks
-					</h4>
+					<h4 className="text-xl">This project is a simple demo on React Hooks</h4>
 
 					<div className="grid grid-cols-2 grid-rows-2 gap-4 mt-3">
 						{[
