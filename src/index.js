@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "./App";
 import "./index.css";
+import UseEffectPage from "./pages/UseEffectPage";
 import UseStatePage from "./pages/UseStatePage";
 import reportWebVitals from "./reportWebVitals";
 
@@ -10,7 +11,7 @@ ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Switch>
-				<Route path="/useEffect" component={App} />
+				<Route path="/useEffect" component={UseEffectPage} />
 				<Route path="/useContext" component={App} />
 				<Route path="/useState" component={UseStatePage} />
 				<Route exact path="/" component={App} />
